@@ -1,0 +1,78 @@
+---
+title: miluph
+description: Meshless Integrated Lagrangian Unified Particle Hydrodynamics — GPU-accelerated SPH codes for astrophysics and continuum mechanics.
+template: splash
+hero:
+  title: miluph
+  tagline: Meshless Integrated Lagrangian Unified Particle Hydrodynamics — High-performance SPH simulations from single workstations to multi-GPU clusters.
+    # Tipp: Hier ein Logo, ein Render einer Hera-Simulation oder ein GIF/WebP einbinden
+  actions:
+    - text: What is MILUPH?
+      link: /what-is-miluph/
+      icon: right-arrow
+      variant: primary
+    - text: Quick Start
+      link: /miluphcuda/
+      icon: rocket
+      variant: secondary
+    - text: GitHub
+      link: https://github.com/christophmschaefer/miluphcuda
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## One Framework, Two Specialized Codes
+
+The **miluph** framework comprises two distinct Smoothed Particle Hydrodynamics (SPH) implementations tailored to your available hardware architecture:
+<CardGrid>
+  <Card title="miluphCUDA — Single-GPU" icon="laptop">
+    Designed for maximum throughput on a single NVIDIA GPU. Ideal for rapid prototyping, parameter studies, and workstation-scale simulations without MPI overhead.
+    </Card>
+  <Card title="miluphHPC — Multi-GPU & Cluster" icon="server">
+    Built with **MPI** for distributed, large-scale simulations across multiple GPUs and HPC compute nodes with dynamic domain decomposition.
+  </Card>
+</CardGrid>
+
+## Core Capabilities
+
+<CardGrid stagger>
+  <Card title="Accurate SPH & Solid Physics" icon="starlight">
+    Full continuum mechanics, elasto-plasticity, brittle fracture, self-gravity, and correction shemes for high numerical consistency.
+  </Card>
+  <Card title="miluph-studio" icon="setting">
+    A browser-based GUI for configuring initial conditions, monitoring jobs, and managing remote HPC workflows on Slurm and SSH clusters.
+  </Card>
+  <Card title="Validated in Planetary Science" icon="magnifier">
+    Actively used in planetary defense and astrophysics research, including impact modeling and validation for ESA's **Hera mission**.
+  </Card>
+  <Card title="Native CUDA Performance" icon="rocket">
+    Written from the ground up in C/CUDA to exploit modern GPU memory hierarchies and massive thread parallelism.
+  </Card>
+</CardGrid>
+
+## Explore the Documentation
+
+<CardGrid>
+  <LinkCard
+    title="Architecture & Physics"
+    description="Learn about the numerical schemes, equations of state, and material models."
+    href="/what-is-miluph/"
+  />
+  <LinkCard
+    title="Install miluphCUDA / miluphHPC"
+    description="Requirements, CUDA/MPI setup, and compiling your first simulation."
+    href="/miluphcuda/"
+  />
+  <LinkCard
+    title="miluph-studio Workflow"
+    description="Set up remote execution via SSH and Slurm directly from your browser."
+    href="/miluph-studio/"
+  />
+  <LinkCard
+    title="Publications & Citing"
+    description="Key papers, benchmark tests, and BibTeX entries for citing MILUPH."
+    href="/publications/"
+  />
+</CardGrid>

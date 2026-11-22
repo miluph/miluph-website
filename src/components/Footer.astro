@@ -1,0 +1,37 @@
+---
+import Default from '@astrojs/starlight/components/Footer.astro';
+---
+
+<!-- Behält den Standard-Footer von Starlight bei (z. B. "Nächste Seite"-Links) -->
+<Default {...Astro.props} />
+
+<div class="subtle-legal-footer">
+  <a href = "/about">About</a>
+  <span>•</span>
+  <a href="https://uni-tuebingen.de/en/imprint/" target="_blank" rel="noopener noreferrer">Imprint</a>
+  <span>•</span>
+  <a href="https://uni-tuebingen.de/en/data-privacy-statement/" target="_blank" rel="noopener noreferrer">Privacy</a>
+</div>
+
+<style>
+  .subtle-legal-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    text-align: center;
+    font-size: var(--sl-text-xs);
+    color: var(--sl-color-gray-4);
+  }
+
+  .subtle-legal-footer a {
+    color: var(--sl-color-gray-3);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, color 0.2s ease;
+  }
+
+  .subtle-legal-footer a:hover {
+    opacity: 1;
+    color: var(--sl-color-white);
+    text-decoration: underline;
+  }
+</style>
