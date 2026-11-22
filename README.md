@@ -80,8 +80,7 @@ Corrections and additions are welcome. Open an issue or a pull request, and keep
 ## Contact
  
 Computational Astrophysics group (AM10/CP), Institute for Astronomy and Astrophysics, University of Tübingen.
- 
+
 ## License
- 
-Add the license of the website content here (e.g. CC BY 4.0 for the documentation) before making the repository public.
- 
+
+Website code is licensed under the MIT License (see `LICENSE`).
