@@ -6,7 +6,6 @@ import rehypeKatex from 'rehype-katex';
 
 export default defineConfig({
 	site: 'https://miluph.github.io',
-	base: 'miluph-website',
 	markdown: {
 		processor: unified({
 			remarkPlugins: [remarkMath],
